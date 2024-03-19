@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Academy_2024.Models
+namespace Academy_2024.Dtos
 {
-    public class User
+    public class UserDto
     {
         [Key]
         public int Id { get; set; }
@@ -16,7 +16,5 @@ namespace Academy_2024.Models
         public string? Email { get; set; }
         [Required]
         public string? Password { get; set; }
-
-        public ICollection<Course> Courses { get; set; } = [];
     }
 }
