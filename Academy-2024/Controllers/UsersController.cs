@@ -21,6 +21,7 @@ namespace Academy_2024.Controllers
 
         // GET: api/<UsersController>
         [HttpGet]
+        [Authorize(Policy = "AdminOnlyPolicy")]
         public async Task<IEnumerable<UserDto>> Get()
         {
             return await _userService.GetAllAsync();
